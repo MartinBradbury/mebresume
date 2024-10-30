@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import styles from '../styles/App.module.css';
+import styles from '../styles/HeroImage.module.css';
 import Card from 'react-bootstrap/Card';
 import { useEffect, useState } from 'react';
 import profilepic from '../assets/profilepic.jpg'
