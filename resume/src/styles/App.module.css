@@ -1,6 +1,11 @@
+.Col {
+    padding: 0px;
+}
+
+
+
 .CardOne {
     padding: 0px;
-    margin-right: 0px;
     transform: translateX(-50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease; /* Add opacity transition */
@@ -8,7 +13,6 @@
 
 .CardTwo {
     padding: 0px;
-    margin-right: 0px;
     transform: translateX(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
@@ -16,7 +20,6 @@
 
 .CardThree {
     padding: 0px;
-    margin-right: 0px;
     transform: translateY(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
