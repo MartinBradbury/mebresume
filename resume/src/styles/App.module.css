@@ -1,5 +1,6 @@
 .Col {
     padding: 0px;
+    margin-top: 60px;
 }
 
 
@@ -9,6 +10,10 @@
     transform: translateX(-50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease; /* Add opacity transition */
+    width: 100%; /* or any specific width */
+    height: 500px; /* auto height maintains aspect ratio */
+    overflow: hidden;
+    border:none;
 }
 
 .CardTwo {
@@ -16,6 +21,8 @@
     transform: translateX(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
+    border: none;
+
 }
 
 .CardThree {
@@ -23,6 +30,9 @@
     transform: translateY(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -35,4 +45,10 @@
 .CardThree.visible {
     transform: translateY(0);  
     opacity: 1; 
+}
+
+.img {
+    width: 100%; /* Makes the image fill the container width */
+    height: 500px; /* Maintains the aspect ratio */
+    object-fit: contain; /* Contains the image within container without cropping*/
 }
