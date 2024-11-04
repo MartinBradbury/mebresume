@@ -46,8 +46,8 @@ function HeroImage() {
     </Container>
     </div>
     <div>
-        <Row>
-      <Col className={styles.Col}>
+        <Row className={styles.linksContainer}>
+      <Col>
       <Card className={`${styles.CardThree} ${visible ? styles.visible : ''}`}>
             <Card.Body>
               <Card.Text className={styles.links}>

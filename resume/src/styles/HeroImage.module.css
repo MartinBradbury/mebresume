@@ -41,10 +41,9 @@
     transform: translateY(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
-    margin-top: 10px;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: none;
 
 }
 
@@ -78,4 +77,9 @@
 
 .links p {
     padding-right: 50px;
+}
+
+.linksContainer {
+    margin-top: 0px;
+    padding-top: 0px;
 }
