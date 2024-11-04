@@ -16,7 +16,7 @@ function HeroImage() {
   return (
     <>
     <div className={styles.heroBg}>
-    <Container>
+    <Container className={styles.testing}>
       <Row>
         <Col className={styles.Col}>
           <Card className={`${styles.CardOne} ${visible ? styles.visible : ''}`}>
