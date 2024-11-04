@@ -5,7 +5,7 @@ import styles from '../styles/NavBar.module.css'
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary sticky-top">
       <Container className={styles.layout}>
         <Navbar.Brand href="#home">Martin Bradbury</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,14 +1,10 @@
 .card {
     margin-top: 10%;
     border: none;
-    width: 1000px;
-    height: 550px;
+    width: auto;
+    height: auto;
     overflow: hidden; /* Ensure content stays within the card */
     cursor: pointer; /* Change cursor to pointer on hover */
-    padding: 8px;
-    border: 3px solid rgb(45, 45, 45);
-    border-radius: 24px;
-    box-shadow: inset 0 0 80px rgba(90, 88, 88, 0.4), 0 0 80px rgba(50, 50, 50, 0.2), 0 0px 80px #3f3e3e80;
   }
   
   .cardBody {
@@ -40,8 +36,9 @@
     left: 0;
     width: 100%; /* Cover full width */
     height: 100%; /* Cover full height */
-    object-fit: cover; /* Cover the entire card area */
+    object-fit:fill; /* Cover the entire card area */
     z-index: 0; /* Set to a lower z-index so content is above */
+    background: #101010;
   }
   
   .card:hover {

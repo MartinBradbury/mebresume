@@ -5,7 +5,17 @@
 }
 
 .heroBg {
-    background: slategrey;
+    /* Size the container */
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+
+  /* Background image settings */
+  background-image: url('../assets/background.jpg');
+  background-attachment: fixed; /* Key for parallax effect */
+  background-size: cover;
+  height: 90%;
+  background-repeat: no-repeat;
+  background-position: center; 
     overflow: none;
 }
 
@@ -20,7 +30,7 @@
     height: 500px; /* auto height maintains aspect ratio */
     overflow: hidden;
     border:none;
-    background: slategrey;
+    background: white;
 }
 
 .CardTwo {
@@ -82,4 +92,5 @@
 .linksContainer {
     margin-top: 0px;
     padding-top: 0px;
+    background: #101010;
 }
