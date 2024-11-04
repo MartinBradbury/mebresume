@@ -1,12 +1,18 @@
 .Col {
     padding: 0px;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
+.heroBg {
+    background: slategrey;
+    overflow: none;
+}
 
 
 .CardOne {
     padding: 0px;
+    margin-right: 0px;
     transform: translateX(-50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease; /* Add opacity transition */
@@ -14,14 +20,19 @@
     height: 500px; /* auto height maintains aspect ratio */
     overflow: hidden;
     border:none;
+    background: slategrey;
 }
 
 .CardTwo {
     padding: 0px;
+    margin-left: 0px;
     transform: translateX(50%);
     opacity: 0; /* Start with 0 opacity */
     transition: transform 3s ease, opacity 3s ease;
-    border: none;
+    border: 1px solid black;
+    width: 100%; /* or any specific width */
+    height: 500px; /* auto height maintains aspect ratio */
+    border:none;
 
 }
 
@@ -33,6 +44,7 @@
     margin-top: 10px;
     align-items: center;
     justify-content: center;
+    border: 1px solid black;
 
 }
 
@@ -51,4 +63,19 @@
     width: 100%; /* Makes the image fill the container width */
     height: 500px; /* Maintains the aspect ratio */
     object-fit: contain; /* Contains the image within container without cropping*/
+}
+
+.CardText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+}
+
+.links p {
+    padding-right: 50px;
 }

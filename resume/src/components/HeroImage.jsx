@@ -14,6 +14,8 @@ function HeroImage() {
     return () => clearTimeout(timer);
   }, []);
   return (
+    <>
+    <div className={styles.heroBg}>
     <Container>
       <Row>
         <Col className={styles.Col}>
@@ -24,29 +26,43 @@ function HeroImage() {
         <Col className={styles.Col}>
           <Card className={`${styles.CardTwo} ${visible ? styles.visible : ''}`}>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+              <Card.Title className={styles.CardText}><h1>Martin Bradbury</h1></Card.Title>
+              <Card.Text className={styles.CardText}>
+                <h3>Junior Software Developer</h3>
+                <h5>Phone:</h5>
+                <p>+44 07464595295</p>
+                <h5>email:</h5>
+                <p>martinbradbury@btinternet.com</p>
+                <h5>Address:</h5>
+                <p>Lincoln, England</p>
+                <h5>Date of Birth:</h5>
+                <p>20-10-1982</p>
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-      <Row>
+      
+    </Container>
+    </div>
+    <div>
+        <Row>
       <Col className={styles.Col}>
       <Card className={`${styles.CardThree} ${visible ? styles.visible : ''}`}>
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.
+              <Card.Text className={styles.links}>
+                <p><i class="fa-brands fa-instagram"></i>Instagram</p>
+                <p><i class="fa-brands fa-linkedin"></i>LinkedIn</p>
+                <p><i class="fa-brands fa-youtube"></i>YouTube</p>
+                <p><i class="fa-brands fa-facebook"></i>Facebook</p>
               </Card.Text>
             </Card.Body>
           </Card>
       </Col>
       </Row>
-    </Container>
+
+    </div>
+    </>
   )
 }
 
