@@ -1,6 +1,6 @@
 import NavBar from './components/NavBar';
 import HeroImage from './components/HeroImage';
-import Projects from './components/Projects';
+import Home from './pages/Home';
 
 function App() {
   
@@ -8,8 +8,7 @@ function App() {
   return (
     <>
     <NavBar />
-    <HeroImage />
-    <Projects />
+    <Home />
     </>
   );
 }
