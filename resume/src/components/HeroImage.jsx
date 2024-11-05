@@ -15,7 +15,7 @@ function HeroImage() {
   }, []);
   return (
     <>
-      <div className={styles.heroBg}>
+      <div className={styles.heroBg} id="home">
         <Container className={styles.testing}>
           <Row>
             <Col className={styles.Col}>

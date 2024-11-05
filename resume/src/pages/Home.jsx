@@ -63,7 +63,7 @@ function Home() {
   return (
     <div>
       <HeroImage />
-      <Container fluid className={styles.bg}>
+      <Container fluid className={styles.bg} id="projects">
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
