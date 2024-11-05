@@ -1,4 +1,9 @@
 .layout {
-    margin-left: 50px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.cont {
+    margin:0px;
     padding: 0px;
 }
