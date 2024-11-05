@@ -51,8 +51,8 @@ function HeroImage() {
         </Container>
       </div>
       <div>
-        <Row className={styles.linksContainer}>
-          <Col>
+        <Row>
+          <Col className={styles.linksContainer}>
             <Card
               className={`${styles.CardThree} ${visible ? styles.visible : ""}`}
             >
