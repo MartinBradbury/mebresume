@@ -85,15 +85,7 @@ function Home() {
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Tri Hub</Card.Title>
-                <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
-                </Card.Text>
-              </Card.Body>
             </Card>
-
             {/* Offcanvas Component */}
             <Offcanvas
               className={styles.canvas}
@@ -134,27 +126,13 @@ function Home() {
             </Offcanvas>
 
             {/* Additional Cards */}
-            <Card
-              className={styles.card}
-              onMouseEnter={handleMouseEnterVideo2}
-              onMouseLeave={handleMouseLeaveVideo2}
-              onClick={handleShow2} // Click to show Offcanvas
-            >
-              <video
-                ref={videoRef2} // Attach the ref to the video element
-                className={styles.video}
-                muted
-                loop
-                playsInline
-                webkit-playsinline="true"
-                autoPlay={isMobile} // Autoplay on mobile only
-                alt="triathlon background video"
-              >
-                <source src={video2} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <Card.Body className={styles.cardBody}>
-                <Card.Title>Tri Hub</Card.Title>
+          </Col>
+          <Col>
+            <Card className={styles.cardBodyText}>
+              <Card.Body>
+                <Card.Title className={styles.cardBodyTextPosition}>
+                  Tri Hub
+                </Card.Title>
                 <Card.Text>
                   A Full Stack project using React.js front end and Django REST
                   back end.
@@ -162,22 +140,6 @@ function Home() {
               </Card.Body>
             </Card>
           </Col>
-
-          {/* Offcanvas Component */}
-          <Offcanvas
-            className={styles.canvas}
-            show={show2}
-            onHide={handleClose2}
-          >
-            <Offcanvas.Header className={styles.whiteCloseButton} closeButton>
-              <Offcanvas.Title className={styles.canvasTitle}>
-                <p>Walking the Wainwrights</p>
-              </Offcanvas.Title>
-            </Offcanvas.Header>
-            <Offcanvas.Body>
-              <p>Test</p>
-            </Offcanvas.Body>
-          </Offcanvas>
         </Row>
       </Container>
     </div>
