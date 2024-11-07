@@ -8,8 +8,7 @@ import video from "../assets/trihub2.mp4";
 import image1 from "../assets/responsiveww.png";
 
 function Home() {
-  const videoRef1 = useRef(null); // Ref for the first video
-  const videoRef2 = useRef(null); // Ref for the second video
+  const videoRef1 = useRef(null);
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -19,101 +18,70 @@ function Home() {
       setIsMobile(window.innerWidth <= 770);
     };
 
-    handleResize(); // Initial check
-    window.addEventListener("resize", handleResize); // Listen for screen resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize); // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleMouseEnterVideo1 = () => {
     if (!isMobile) {
-      videoRef1.current.play(); // Play the first video on mouse enter (desktop only)
+      videoRef1.current.play();
     }
   };
 
   const handleMouseLeaveVideo1 = () => {
     if (!isMobile) {
-      videoRef1.current.pause(); // Pause the first video on mouse leave (desktop only)
-      videoRef1.current.currentTime = 0; // Reset video to start
+      videoRef1.current.pause();
+      videoRef1.current.currentTime = 0;
     }
   };
 
-  const handleMouseEnterVideo2 = () => {
-    if (!isMobile) {
-      videoRef2.current.play(); // Play the second video on mouse enter (desktop only)
-    }
-  };
-
-  const handleMouseLeaveVideo2 = () => {
-    if (!isMobile) {
-      videoRef2.current.pause(); // Pause the second video on mouse leave (desktop only)
-      videoRef2.current.currentTime = 0; // Reset video to start
-    }
-  };
-
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleClose2 = () => setShow2(false);
-
-  const handleShow = () => setShow(true);
-  const handleShow2 = () => setShow2(true);
+  const [showTriHub, setShowTriHub] = useState(false);
+  const [showWainwrights, setShowWainwrights] = useState(false);
+  const [showSoulRoll, setShowSoulRoll] = useState(false);
+  const [showScienceQuiz, setShowScienceQuiz] = useState(false);
+  const [showPhotography, setShowPhotography] = useState(false);
 
   return (
     <div>
       <HeroImage />
       <Container fluid className={styles.bg} id="projects">
+        {/* TRI HUB */}
         <Row className="justify-content-center text-center">
           <Col>
             <Card
               className={styles.card}
               onMouseEnter={handleMouseEnterVideo1}
               onMouseLeave={handleMouseLeaveVideo1}
-              onClick={handleShow} // Click to show Offcanvas
+              onClick={() => setShowTriHub(true)}
             >
               <video
-                ref={videoRef1} // Attach the ref to the video element
+                ref={videoRef1}
                 className={styles.video}
                 muted
                 loop
                 playsInline
-                webkit-playsinline="true"
-                autoPlay={isMobile} // Autoplay on mobile only
+                autoPlay={isMobile}
                 alt="triathlon background video"
               >
                 <source src={video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </Card>
-            {/* Offcanvas Component */}
             <Offcanvas
               className={styles.canvas}
-              show={show}
-              onHide={handleClose}
+              show={showTriHub}
+              onHide={() => setShowTriHub(false)}
             >
-              <Offcanvas.Header className={styles.whiteCloseButton} closeButton>
-                <Offcanvas.Title className={styles.canvasTitle}>
-                  <p>Tri Hub</p>
-                </Offcanvas.Title>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Tri Hub</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <p>
                   TriHub is a comprehensive platform created by Martin Bradbury,
                   designed to serve the diverse needs of the triathlon
-                  community. It aims to bring together triathletes of all skill
-                  levels by offering a range of features, including performance
-                  tracking, customizable training plans, and a vibrant social
-                  space for sharing experiences. The platform emphasizes user
-                  engagement, providing tools for setting goals, interacting
-                  with the community, and staying updated with the latest
-                  industry news. TriHub's design focuses on accessibility and
-                  usability for competitive athletes, casual participants, and
-                  newcomers alike. The platform features a responsive layout and
-                  a clean, straightforward color scheme, ensuring a seamless
-                  experience across all devices. Continuous improvement is a
-                  priority, with future updates planned to enhance user
-                  satisfaction and expand platform capabilities.
+                  community...
                   <br />
                   <br />
                   <h1>Technologies Used:</h1>
@@ -124,15 +92,11 @@ function Home() {
                 </p>
               </Offcanvas.Body>
             </Offcanvas>
-
-            {/* Additional Cards */}
           </Col>
           <Col>
             <Card className={styles.cardBodyText}>
               <Card.Body>
-                <Card.Title className={styles.cardBodyTextPosition}>
-                  Tri Hub
-                </Card.Title>
+                <Card.Title>Tri Hub</Card.Title>
                 <Card.Text>
                   A Full Stack project using React.js front end and Django REST
                   back end.
@@ -141,33 +105,31 @@ function Home() {
             </Card>
           </Col>
         </Row>
+
+        {/* WALKING THE WAINWRIGHTS */}
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
               className={styles.card}
-              onClick={handleShow} // Click to show Offcanvas
+              onClick={() => setShowWainwrights(true)}
             >
               <img
                 className={styles.image}
                 alt="walking the wainwrights image"
                 src={image1}
               />
-              Your browser does not support the video tag.
             </Card>
-            {/* Offcanvas Component */}
             <Offcanvas
               className={styles.canvas}
-              show={show}
-              onHide={handleClose}
+              show={showWainwrights}
+              onHide={() => setShowWainwrights(false)}
             >
-              <Offcanvas.Header className={styles.whiteCloseButton} closeButton>
-                <Offcanvas.Title className={styles.canvasTitle}>
-                  <p>Tri Hub</p>
-                </Offcanvas.Title>
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Walking the Wainwrights</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <p>
-                  Walking the wainwrights
+                  Walking the Wainwrights...
                   <br />
                   <br />
                   <h1>Technologies Used:</h1>
@@ -178,15 +140,152 @@ function Home() {
                 </p>
               </Offcanvas.Body>
             </Offcanvas>
-
-            {/* Additional Cards */}
           </Col>
           <Col>
             <Card className={styles.cardBodyText}>
               <Card.Body>
-                <Card.Title className={styles.cardBodyTextPosition}>
-                  Tri Hub
-                </Card.Title>
+                <Card.Title>Walking the Wainwrights</Card.Title>
+                <Card.Text>
+                  A Full Stack project using React.js front end and Django REST
+                  back end.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* Soul Roll Project */}
+        <Row className="justify-content-center text-center">
+          <Col xs={12} sm={10} md={8} lg={6}>
+            <Card className={styles.card} onClick={() => setShowSoulRoll(true)}>
+              <img
+                className={styles.image}
+                alt="soul roll image"
+                src={image1}
+              />
+            </Card>
+            <Offcanvas
+              className={styles.canvas}
+              show={showSoulRoll}
+              onHide={() => setShowSoulRoll(false)}
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>SoulRoll</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <p>
+                  SoulRoll Python project...
+                  <br />
+                  <br />
+                  <h1>Technologies Used:</h1>
+                  <strong>
+                    Frontend: React, Axios, React Bootstrap Backend: Python,
+                    Django REST Additional Features: Responsive design
+                  </strong>
+                </p>
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Col>
+          <Col>
+            <Card className={styles.cardBodyText}>
+              <Card.Body>
+                <Card.Title>SoulRoll - Python Project</Card.Title>
+                <Card.Text>
+                  A Full Stack project using React.js front end and Django REST
+                  back end.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* Science Quiz */}
+        <Row className="justify-content-center text-center">
+          <Col xs={12} sm={10} md={8} lg={6}>
+            <Card
+              className={styles.card}
+              onClick={() => setShowScienceQuiz(true)}
+            >
+              <img
+                className={styles.image}
+                alt="science quiz image"
+                src={image1}
+              />
+            </Card>
+            <Offcanvas
+              className={styles.canvas}
+              show={showScienceQuiz}
+              onHide={() => setShowScienceQuiz(false)}
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Science Quiz</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <p>
+                  Science Quiz - JavaScript project...
+                  <br />
+                  <br />
+                  <h1>Technologies Used:</h1>
+                  <strong>
+                    Frontend: React, Axios, React Bootstrap Backend: Python,
+                    Django REST Additional Features: Responsive design
+                  </strong>
+                </p>
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Col>
+          <Col>
+            <Card className={styles.cardBodyText}>
+              <Card.Body>
+                <Card.Title>Science Quiz - JavaScript Project</Card.Title>
+                <Card.Text>
+                  A Full Stack project using React.js front end and Django REST
+                  back end.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* Photography */}
+        <Row className="justify-content-center text-center">
+          <Col xs={12} sm={10} md={8} lg={6}>
+            <Card
+              className={styles.card}
+              onClick={() => setShowPhotography(true)}
+            >
+              <img
+                className={styles.image}
+                alt="wildlife photography image"
+                src={image1}
+              />
+            </Card>
+            <Offcanvas
+              className={styles.canvas}
+              show={showPhotography}
+              onHide={() => setShowPhotography(false)}
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>MEB Wildlife Photography</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <p>
+                  MEB Wildlife Photography project...
+                  <br />
+                  <br />
+                  <h1>Technologies Used:</h1>
+                  <strong>
+                    Frontend: React, Axios, React Bootstrap Backend: Python,
+                    Django REST Additional Features: Responsive design
+                  </strong>
+                </p>
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Col>
+          <Col>
+            <Card className={styles.cardBodyText}>
+              <Card.Body>
+                <Card.Title>MEB Wildlife Photography</Card.Title>
                 <Card.Text>
                   A Full Stack project using React.js front end and Django REST
                   back end.
