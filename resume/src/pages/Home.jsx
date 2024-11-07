@@ -5,7 +5,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import Card from "react-bootstrap/Card";
 import video from "../assets/trihub2.mp4";
-import image1 from "../assets/responsiveww.png";
+import wainwrights from "../assets/wainwrights.png";
+import mebwildlife from "../assets/mebwildlife.png";
+import sciencequiz from "../assets/sciencequiz.webp";
+import soulroll from "../assets/soulroll.png";
 
 function Home() {
   const videoRef1 = useRef(null);
@@ -116,7 +119,7 @@ function Home() {
               <img
                 className={styles.image}
                 alt="walking the wainwrights image"
-                src={image1}
+                src={wainwrights}
               />
             </Card>
             <Offcanvas
@@ -161,7 +164,7 @@ function Home() {
               <img
                 className={styles.image}
                 alt="soul roll image"
-                src={image1}
+                src={soulroll}
               />
             </Card>
             <Offcanvas
@@ -209,7 +212,7 @@ function Home() {
               <img
                 className={styles.image}
                 alt="science quiz image"
-                src={image1}
+                src={sciencequiz}
               />
             </Card>
             <Offcanvas
@@ -257,7 +260,7 @@ function Home() {
               <img
                 className={styles.image}
                 alt="wildlife photography image"
-                src={image1}
+                src={mebwildlife}
               />
             </Card>
             <Offcanvas
