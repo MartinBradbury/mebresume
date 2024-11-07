@@ -97,7 +97,9 @@ function Home() {
             </Offcanvas>
           </Col>
           <Col>
-            <Card className={styles.cardBodyText}>
+            <Card
+              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+            >
               <Card.Body>
                 <Card.Title>Tri Hub</Card.Title>
                 <Card.Text>
@@ -145,7 +147,9 @@ function Home() {
             </Offcanvas>
           </Col>
           <Col>
-            <Card className={styles.cardBodyText}>
+            <Card
+              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+            >
               <Card.Body>
                 <Card.Title>Walking the Wainwrights</Card.Title>
                 <Card.Text>
@@ -190,7 +194,9 @@ function Home() {
             </Offcanvas>
           </Col>
           <Col>
-            <Card className={styles.cardBodyText}>
+            <Card
+              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+            >
               <Card.Body>
                 <Card.Title>SoulRoll - Python Project</Card.Title>
                 <Card.Text>
@@ -238,7 +244,9 @@ function Home() {
             </Offcanvas>
           </Col>
           <Col>
-            <Card className={styles.cardBodyText}>
+            <Card
+              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+            >
               <Card.Body>
                 <Card.Title>Science Quiz - JavaScript Project</Card.Title>
                 <Card.Text>
@@ -286,7 +294,9 @@ function Home() {
             </Offcanvas>
           </Col>
           <Col>
-            <Card className={styles.cardBodyText}>
+            <Card
+              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+            >
               <Card.Body>
                 <Card.Title>MEB Wildlife Photography</Card.Title>
                 <Card.Text>
