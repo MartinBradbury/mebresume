@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import styles from "../styles/Home.module.css";
 import Card from "react-bootstrap/Card";
 import video from "../assets/trihub2.mp4";
-import video2 from "../assets/trihub.mp4";
+import image1 from "../assets/responsiveww.png";
 
 function Home() {
   const videoRef1 = useRef(null); // Ref for the first video
@@ -145,23 +145,14 @@ function Home() {
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
               className={styles.card}
-              onMouseEnter={handleMouseEnterVideo1}
-              onMouseLeave={handleMouseLeaveVideo1}
               onClick={handleShow} // Click to show Offcanvas
             >
-              <video
-                ref={videoRef1} // Attach the ref to the video element
-                className={styles.video}
-                muted
-                loop
-                playsInline
-                webkit-playsinline="true"
-                autoPlay={isMobile} // Autoplay on mobile only
-                alt="triathlon background video"
-              >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              <img
+                className={styles.image}
+                alt="walking the wainwrights image"
+                src={image1}
+              />
+              Your browser does not support the video tag.
             </Card>
             {/* Offcanvas Component */}
             <Offcanvas
@@ -176,21 +167,7 @@ function Home() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <p>
-                  TriHub is a comprehensive platform created by Martin Bradbury,
-                  designed to serve the diverse needs of the triathlon
-                  community. It aims to bring together triathletes of all skill
-                  levels by offering a range of features, including performance
-                  tracking, customizable training plans, and a vibrant social
-                  space for sharing experiences. The platform emphasizes user
-                  engagement, providing tools for setting goals, interacting
-                  with the community, and staying updated with the latest
-                  industry news. TriHub's design focuses on accessibility and
-                  usability for competitive athletes, casual participants, and
-                  newcomers alike. The platform features a responsive layout and
-                  a clean, straightforward color scheme, ensuring a seamless
-                  experience across all devices. Continuous improvement is a
-                  priority, with future updates planned to enhance user
-                  satisfaction and expand platform capabilities.
+                  Walking the wainwrights
                   <br />
                   <br />
                   <h1>Technologies Used:</h1>
