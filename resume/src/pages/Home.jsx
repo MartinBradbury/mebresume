@@ -12,10 +12,8 @@ import soulroll from "../assets/soulroll.png";
 
 function Home() {
   const videoRef1 = useRef(null);
-
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect screen width to toggle autoplay behavior
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 770);
@@ -23,7 +21,6 @@ function Home() {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -50,18 +47,18 @@ function Home() {
     <div>
       <HeroImage />
       <Container fluid className={styles.bg} id="projects">
-        {/* TRI HUB */}
+        {/* Project Cards */}
         <Row className="justify-content-center text-center">
-          <Col>
+          <Col xs={12} sm={10} md={8} lg={6}>
             <Card
-              className={styles.card}
+              className={`${styles.card} d-flex align-items-center justify-content-center`}
               onMouseEnter={handleMouseEnterVideo1}
               onMouseLeave={handleMouseLeaveVideo1}
               onClick={() => setShowTriHub(true)}
             >
               <video
                 ref={videoRef1}
-                className={styles.video}
+                className={`${styles.video}`}
                 muted
                 loop
                 playsInline
@@ -82,44 +79,33 @@ function Home() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <p>
-                  TriHub is a comprehensive platform created by Martin Bradbury,
-                  designed to serve the diverse needs of the triathlon
-                  community...
-                  <br />
-                  <br />
-                  <h1>Technologies Used:</h1>
-                  <strong>
-                    Frontend: React, Axios, React Bootstrap Backend: Python,
-                    Django REST Additional Features: Responsive design
-                  </strong>
+                  TriHub is a platform created for the triathlon community...
                 </p>
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
           <Col>
             <Card
-              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+              className={`${styles.cardBodyText} d-flex align-items-center justify-content-center`}
             >
-              <Card.Body>
+              <Card.Body className="text-center">
                 <Card.Title>Tri Hub</Card.Title>
                 <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
+                  A Full Stack project using React and Django REST.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
 
-        {/* WALKING THE WAINWRIGHTS */}
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
-              className={styles.card}
+              className={`${styles.card} d-flex align-items-center justify-content-center`}
               onClick={() => setShowWainwrights(true)}
             >
               <img
-                className={styles.image}
+                className={`${styles.image} d-block mx-auto`}
                 alt="walking the wainwrights image"
                 src={wainwrights}
               />
@@ -133,41 +119,32 @@ function Home() {
                 <Offcanvas.Title>Walking the Wainwrights</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <p>
-                  Walking the Wainwrights...
-                  <br />
-                  <br />
-                  <h1>Technologies Used:</h1>
-                  <strong>
-                    Frontend: React, Axios, React Bootstrap Backend: Python,
-                    Django REST Additional Features: Responsive design
-                  </strong>
-                </p>
+                <p>Walking the Wainwrights project details...</p>
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
           <Col>
             <Card
-              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+              className={`${styles.cardBodyText} d-flex align-items-center justify-content-center`}
             >
-              <Card.Body>
+              <Card.Body className="text-center">
                 <Card.Title>Walking the Wainwrights</Card.Title>
                 <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
+                  A Full Stack project using React and Django REST.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-
-        {/* Soul Roll Project */}
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
-            <Card className={styles.card} onClick={() => setShowSoulRoll(true)}>
+            <Card
+              className={`${styles.card} d-flex align-items-center justify-content-center`}
+              onClick={() => setShowSoulRoll(true)}
+            >
               <img
-                className={styles.image}
-                alt="soul roll image"
+                className={`${styles.image} d-block mx-auto`}
+                alt="soulroll image"
                 src={soulroll}
               />
             </Card>
@@ -180,44 +157,32 @@ function Home() {
                 <Offcanvas.Title>SoulRoll</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <p>
-                  SoulRoll Python project...
-                  <br />
-                  <br />
-                  <h1>Technologies Used:</h1>
-                  <strong>
-                    Frontend: React, Axios, React Bootstrap Backend: Python,
-                    Django REST Additional Features: Responsive design
-                  </strong>
-                </p>
+                <p>SoulRoll project details...</p>
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
           <Col>
             <Card
-              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+              className={`${styles.cardBodyText} d-flex align-items-center justify-content-center`}
             >
-              <Card.Body>
+              <Card.Body className="text-center">
                 <Card.Title>SoulRoll - Python Project</Card.Title>
                 <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
+                  A Full Stack project using React and Django REST.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-
-        {/* Science Quiz */}
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
-              className={styles.card}
+              className={`${styles.card} d-flex align-items-center justify-content-center`}
               onClick={() => setShowScienceQuiz(true)}
             >
               <img
-                className={styles.image}
-                alt="science quiz image"
+                className={`${styles.image} d-block mx-auto`}
+                alt="soulroll image"
                 src={sciencequiz}
               />
             </Card>
@@ -230,44 +195,32 @@ function Home() {
                 <Offcanvas.Title>Science Quiz</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <p>
-                  Science Quiz - JavaScript project...
-                  <br />
-                  <br />
-                  <h1>Technologies Used:</h1>
-                  <strong>
-                    Frontend: React, Axios, React Bootstrap Backend: Python,
-                    Django REST Additional Features: Responsive design
-                  </strong>
-                </p>
+                <p>Science Quiz project details...</p>
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
           <Col>
             <Card
-              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+              className={`${styles.cardBodyText} d-flex align-items-center justify-content-center`}
             >
-              <Card.Body>
-                <Card.Title>Science Quiz - JavaScript Project</Card.Title>
+              <Card.Body className="text-center">
+                <Card.Title>Science Quiz - Python Project</Card.Title>
                 <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
+                  A Full Stack project using React and Django REST.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
         </Row>
-
-        {/* Photography */}
         <Row className="justify-content-center text-center">
           <Col xs={12} sm={10} md={8} lg={6}>
             <Card
-              className={styles.card}
+              className={`${styles.card} d-flex align-items-center justify-content-center`}
               onClick={() => setShowPhotography(true)}
             >
               <img
-                className={styles.image}
-                alt="wildlife photography image"
+                className={`${styles.image} d-block mx-auto`}
+                alt="soulroll image"
                 src={mebwildlife}
               />
             </Card>
@@ -280,28 +233,18 @@ function Home() {
                 <Offcanvas.Title>MEB Wildlife Photography</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <p>
-                  MEB Wildlife Photography project...
-                  <br />
-                  <br />
-                  <h1>Technologies Used:</h1>
-                  <strong>
-                    Frontend: React, Axios, React Bootstrap Backend: Python,
-                    Django REST Additional Features: Responsive design
-                  </strong>
-                </p>
+                <p>MEB Wildlife Photography project details...</p>
               </Offcanvas.Body>
             </Offcanvas>
           </Col>
           <Col>
             <Card
-              className={`${styles.cardBodyText} ${styles.cardBodyTextPosition}`}
+              className={`${styles.cardBodyText} d-flex align-items-center justify-content-center`}
             >
-              <Card.Body>
-                <Card.Title>MEB Wildlife Photography</Card.Title>
+              <Card.Body className="text-center">
+                <Card.Title>MEB Wildlife Photography - HTML / CSS</Card.Title>
                 <Card.Text>
-                  A Full Stack project using React.js front end and Django REST
-                  back end.
+                  A Full Stack project using React and Django REST.
                 </Card.Text>
               </Card.Body>
             </Card>
