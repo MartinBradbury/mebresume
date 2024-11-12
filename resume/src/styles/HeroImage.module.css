@@ -100,3 +100,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.hideOnMobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+}

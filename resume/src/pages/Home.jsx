@@ -56,18 +56,25 @@ function Home() {
               onMouseLeave={handleMouseLeaveVideo1}
               onClick={() => setShowTriHub(true)}
             >
-              <video
-                ref={videoRef1}
-                className={`${styles.video}`}
-                muted
-                loop
-                playsInline
-                autoPlay={isMobile}
-                alt="triathlon background video"
-              >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              {isMobile ? (
+                <img
+                  src={wainwrights}
+                  alt="triathlon project image"
+                  className={`${styles.image} d-block mx-auto`}
+                />
+              ) : (
+                <video
+                  ref={videoRef1}
+                  className={`${styles.video}`}
+                  muted
+                  loop
+                  playsInline
+                  alt="triathlon background video"
+                >
+                  <source src={video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </Card>
             <Offcanvas
               className={styles.canvas}
